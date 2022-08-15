@@ -6,7 +6,7 @@
 #    By: seyeo <seyeo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/14 00:48:01 by seyeo             #+#    #+#              #
-#    Updated: 2022/08/15 15:10:11 by seyeo            ###   ########.fr        #
+#    Updated: 2022/08/15 19:25:06 by seyeo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS		= arr_utils.c \
 			  command_sspa.c \
 			  init.c \
 			  main.c \
-			  sort_ratate_utils.c \
+			  sort_rotate_utils.c \
 			  sort_rotate.c \
 			  sort_utils.c \
 			  sort.c \
