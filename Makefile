@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: seyeo <responsible@kakao.com>              +#+  +:+       +#+         #
+#    By: seyeo <seyeo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/14 00:48:01 by seyeo             #+#    #+#              #
-#    Updated: 2022/08/14 01:21:12 by seyeo            ###   ########.fr        #
+#    Updated: 2022/08/15 15:10:11 by seyeo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRCS		= arr_utils.c \
 			  sort_rotate.c \
 			  sort_utils.c \
 			  sort.c \
-			  utils.c
+			  utils.c \
+			  ft_split.c
 			  
 OBJS		= $(SRCS:%.c=%.o)
 

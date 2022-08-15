@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
+/*   By: seyeo <seyeo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:00:13 by seyeo             #+#    #+#             */
-/*   Updated: 2022/08/14 01:35:23 by seyeo            ###   ########.fr       */
+/*   Updated: 2022/08/15 16:10:16 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ typedef struct s_info
 char	**ft_split(char const *s, char c);
 int		ft_isdigit(int c);
 int		ft_isspace(char c);
-int		print_error(int fd);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlen(const char *s);
+void	print_error(int a);
 int		is_valid_digit(const char *str);	
 void	is_valid_param(int *arr, int size, int i);
 int		get_spstr_size(char **str);

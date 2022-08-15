@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   arr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
+/*   By: seyeo <seyeo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 21:08:49 by seyeo             #+#    #+#             */
-/*   Updated: 2022/08/13 18:16:30 by seyeo            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:11:42 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	arr_stack(t_info *info, int *arr, int size)
 	node = NULL;
 }
 
-
 void	set_int_arr(int	*arr, int *arr_index, char **str)
 {
 	int	tmp;
@@ -48,7 +47,6 @@ void	set_int_arr(int	*arr, int *arr_index, char **str)
 		i++;
 	}
 }
-
 
 int	*argv_arr(int argc, char *argv[], int size)
 {

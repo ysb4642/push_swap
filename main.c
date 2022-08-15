@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
+/*   By: seyeo <seyeo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:11:44 by seyeo             #+#    #+#             */
-/*   Updated: 2022/08/13 20:42:21 by seyeo            ###   ########.fr       */
+/*   Updated: 2022/08/15 15:53:18 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	print_error(int a)
-{
-	if (a > 0)
-		write(2, "Error\n", 6);
-	exit(1);
-	return (-1);
-}
 
 int	main(int argc, char *argv[])
 {
