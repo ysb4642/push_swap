@@ -6,7 +6,7 @@
 /*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 21:24:43 by seyeo             #+#    #+#             */
-/*   Updated: 2022/08/09 21:51:29 by seyeo            ###   ########.fr       */
+/*   Updated: 2022/08/14 01:24:17 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ t_nums	*init_stack(void)
 
 	stack = NULL;
 	stack = (t_nums *)malloc(sizeof(t_nums));
-	stack->content = 0;
 	stack->prev = NULL;
+	stack->content = 0;
 	stack->next = NULL;
 	return (stack);
 }

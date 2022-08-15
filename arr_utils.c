@@ -6,7 +6,7 @@
 /*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:37:01 by seyeo             #+#    #+#             */
-/*   Updated: 2022/08/09 21:51:27 by seyeo            ###   ########.fr       */
+/*   Updated: 2022/08/14 01:29:55 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	is_valid_digit(const char *str)
 		str++;
 		cnt++;
 	}
-	res *= sign;
+	res = res * sign;
 	if (*str != '\0' || cnt > 10
 		|| res > 2147483647 || res < -2147483648)
 		print_error(1);

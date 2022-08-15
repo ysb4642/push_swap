@@ -1,16 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youjeon <youjeon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 14:19:17 by youjeon           #+#    #+#             */
-/*   Updated: 2022/01/16 14:48:02 by youjeon          ###   ########.fr       */
+/*   Created: 2022/08/14 00:50:22 by seyeo             #+#    #+#             */
+/*   Updated: 2022/08/14 01:08:45 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t len)
+{
+	size_t	src_len;
+	size_t	i;
+
+	src_len = 0;
+	i = 0;
+	while (src[src_len])
+		src_len++;
+	if (len == 0)
+	{
+		return (src_len);
+	}
+	while (i < len - 1 && *src)
+	{
+		*dst = *src;
+		dst++;
+		src++;
+		i++;
+	}
+	*dst = '\0';
+	return (src_len);
+}
 
 static size_t	get_word_cnt(char const *str, char c)
 {
@@ -89,4 +113,27 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	new_mem = set_worddup(s, c, new_mem);
 	return (new_mem);
+}
+
+
+int	ft_isspace(char c)
+{
+	if (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ')
+	{
+		return (1);
+	}
+	return (0);
+}
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

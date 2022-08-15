@@ -3,30 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   sort_rotate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youjeon <youjeon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: seyeo <responsible@kakao.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 14:04:08 by youjeon           #+#    #+#             */
-/*   Updated: 2022/01/15 14:34:32 by youjeon          ###   ########.fr       */
+/*   Created: 2022/08/13 18:54:15 by seyeo             #+#    #+#             */
+/*   Updated: 2022/08/13 20:25:06 by seyeo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
 
-int	set_a_location(int num, t_info *info)
+int	set_location(int num, t_info *info)
 {
-	int	ret;
+	int	location;
 
-	if (num < get_stack_min(info->top_a))
-		ret = set_a_location_min(info);
-	else if (num > get_stack_max(info->top_a))
-		ret = set_a_location_max(info);
+	if (num < get_min(info->top_a))
+		location = set_min_location(info);
+	else if (num > get_max(info->top_a))
+		location = set_max_location(info);
 	else
-		ret = set_a_location_mid(num, info);
-	return (ret);
+		location = set_mid_location(num, info);
+	return (location);
 }
 
-void	ft_rotate_same(t_info *info, int *a, int *b)
+void	rotate_ab(t_info *info, int *a, int *b)
 {
 	while (*a && *b && (*a > 0 && *b > 0))
 	{
@@ -42,24 +41,7 @@ void	ft_rotate_same(t_info *info, int *a, int *b)
 	}
 }
 
-void	ft_rotate_a(t_info *info, int a)
-{
-	while (a)
-	{
-		if (a > 0)
-		{
-			ra(info);
-			a--;
-		}
-		else
-		{
-			rra(info);
-			a++;
-		}
-	}
-}
-
-void	ft_rotate_b(t_info *info, int b)
+void	rotate_b(t_info *info, int b)
 {
 	while (b)
 	{
@@ -72,6 +54,23 @@ void	ft_rotate_b(t_info *info, int b)
 		{
 			rrb(info);
 			b++;
+		}
+	}
+}
+
+void	rotate_a(t_info *info, int a)
+{
+	while (a)
+	{
+		if (a > 0)
+		{
+			ra(info);
+			a--;
+		}
+		else
+		{
+			rra(info);
+			a++;
 		}
 	}
 }
